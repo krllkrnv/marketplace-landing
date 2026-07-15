@@ -20,6 +20,10 @@ https://krllkrnv.github.io/marketplace-landing/
 - Catalog open/close: `template_project` / `TheHeader` + `TheMenu`
 - Currency toggle: `luzhnikicollection_copy` / `VCurrencySelector`
 - Product card hover: `levelgroup` / `ParkingCard.scss`
+- Hover only on capable pointers: `@media (hover: hover)` (как `@include hover` в Ida)
+- Состояния UI: `._active` / `._opened`, хуки поведения: `js-*`
+- Transitions: `--default-transition`, `prefers-reduced-motion`, `:focus-visible`
+- Интерактив: `cursor: pointer` + `user-select: none` на кнопках/ссылках UI
 
 ## Чеклист ТЗ
 
@@ -35,6 +39,10 @@ https://krllkrnv.github.io/marketplace-landing/
 ## Ассеты
 
 Изображения и иконки из Figma MCP сохранены локально в `assets/figma/` и подключены из `index.html` относительными путями.
+
+## Ограничения относительно Ida / Twig
+
+По ТЗ — чистый HTML без сборки: повторяющиеся карточки товаров и отзывов оставлены инлайном (без Twig partials). Именование `figma-asset-*` — handoff из MCP; неиспользуемые файлы убраны.
 
 ## Время
 

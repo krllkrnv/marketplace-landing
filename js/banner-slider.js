@@ -5,13 +5,17 @@ export const initBannerSlider = () => {
     return;
   }
 
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   new Swiper(slider, {
     loop: true,
-    speed: 650,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    speed: prefersReducedMotion ? 0 : 650,
+    autoplay: prefersReducedMotion
+      ? false
+      : {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
     navigation: {
       prevEl: ".js-banner-prev",
       nextEl: ".js-banner-next",

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Магазин цифровых товаров</title>
+    <meta name="description" content="Ключи, пополнения, подписки и гифт-карты для геймеров." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet" />
@@ -21,40 +22,40 @@
   <body>
     <div class="page">
       <div class="page__panel">
-      <header class="header" data-header>
+      <header class="header">
         <div class="header__container container">
           <div class="header__spacer" aria-hidden="true"></div>
 
           <button class="header__catalog js-catalog-toggle" type="button" aria-expanded="false" aria-controls="catalog-menu">
-            <img src="assets/figma/figma-asset-01.svg" alt="Каталог" width="20" height="20" />
+            <img src="assets/figma/figma-asset-01.svg" alt="" width="20" height="20" />
             <span>Каталог</span>
           </button>
 
           <form class="header__search" action="#">
             <div class="header__search-field">
-              <input class="header__search-input" type="search" placeholder="Игра, приложение или услуга..." />
+              <input class="header__search-input" type="search" name="q" placeholder="Игра, приложение или услуга..." aria-label="Игра, приложение или услуга" />
               <button class="header__favorite" type="button" aria-label="Избранное">
-                <img src="assets/figma/figma-asset-02.svg" alt="Избранное" width="14" height="13" />
+                <img src="assets/figma/figma-asset-02.svg" alt="" width="14" height="13" />
               </button>
             </div>
             <button class="header__search-button" type="submit" aria-label="Найти">
-              <img src="assets/figma/figma-asset-03.svg" alt="Поиск" width="20" height="20" />
+              <img src="assets/figma/figma-asset-03.svg" alt="" width="20" height="20" />
             </button>
           </form>
 
           <button class="header__profile" type="button" aria-label="Профиль">
-            <img src="assets/figma/profile-icon.svg" alt="Профиль" width="20" height="20" />
+            <img src="assets/figma/profile-icon.svg" alt="" width="20" height="20" />
           </button>
         </div>
 
         <div class="catalog js-catalog-menu" id="catalog-menu" aria-hidden="true">
           <div class="catalog__container">
             <aside class="catalog__sidebar" aria-label="Категории каталога">
-              <button class="catalog__category catalog__category--active" type="button">Игры и игровые сервисы</button>
-              <button class="catalog__category" type="button">Игровые ценности</button>
-              <button class="catalog__category" type="button">Мобильные игры</button>
-              <button class="catalog__category" type="button">Сервисы и соцсети</button>
-              <button class="catalog__category" type="button">Программы</button>
+              <button class="catalog__category _active" aria-pressed="true" type="button">Игры и игровые сервисы</button>
+              <button class="catalog__category" aria-pressed="false" type="button">Игровые ценности</button>
+              <button class="catalog__category" aria-pressed="false" type="button">Мобильные игры</button>
+              <button class="catalog__category" aria-pressed="false" type="button">Сервисы и соцсети</button>
+              <button class="catalog__category" aria-pressed="false" type="button">Программы</button>
             </aside>
 
             <div class="catalog__content">
@@ -113,25 +114,26 @@
       </header>
 
       <main class="main">
+        <h1 class="visually-hidden">Магазин цифровых товаров для геймеров</h1>
         <section class="banner-slider container" aria-label="Акции">
           <div class="banner-slider__viewport">
             <div class="banner-slider__swiper swiper js-banner-slider">
               <div class="swiper-wrapper">
-                <article class="banner-slider__slide banner-slider__slide--cyan swiper-slide" aria-label="Промо-баннер магазина"></article>
-                <article class="banner-slider__slide banner-slider__slide--blue swiper-slide" aria-label="Промо-баннер с подборкой товаров"></article>
-                <article class="banner-slider__slide banner-slider__slide--violet swiper-slide" aria-label="Промо-баннер пополнений"></article>
-                <article class="banner-slider__slide banner-slider__slide--lime swiper-slide" aria-label="Промо-баннер подписок"></article>
-                <article class="banner-slider__slide banner-slider__slide--orange swiper-slide" aria-label="Промо-баннер ключей"></article>
-                <article class="banner-slider__slide banner-slider__slide--magenta swiper-slide" aria-label="Промо-баннер игровых сервисов"></article>
+                <div class="banner-slider__slide banner-slider__slide--cyan swiper-slide" role="group" aria-label="Промо-баннер магазина"></div>
+                <div class="banner-slider__slide banner-slider__slide--blue swiper-slide" role="group" aria-label="Промо-баннер с подборкой товаров"></div>
+                <div class="banner-slider__slide banner-slider__slide--violet swiper-slide" role="group" aria-label="Промо-баннер пополнений"></div>
+                <div class="banner-slider__slide banner-slider__slide--lime swiper-slide" role="group" aria-label="Промо-баннер подписок"></div>
+                <div class="banner-slider__slide banner-slider__slide--orange swiper-slide" role="group" aria-label="Промо-баннер ключей"></div>
+                <div class="banner-slider__slide banner-slider__slide--magenta swiper-slide" role="group" aria-label="Промо-баннер игровых сервисов"></div>
               </div>
             </div>
 
             <div class="banner-slider__controls">
               <button class="banner-slider__button banner-slider__button--prev js-banner-prev" type="button" aria-label="Предыдущий баннер">
-                <img src="assets/figma/figma-asset-07.svg" alt="Назад" width="22" height="22" />
+                <img src="assets/figma/figma-asset-07.svg" alt="" width="22" height="22" />
               </button>
               <button class="banner-slider__button banner-slider__button--next js-banner-next" type="button" aria-label="Следующий баннер">
-                <img src="assets/figma/figma-asset-08.svg" alt="Вперёд" width="22" height="22" />
+                <img src="assets/figma/figma-asset-08.svg" alt="" width="22" height="22" />
               </button>
             </div>
             <div class="banner-slider__pagination js-banner-pagination"></div>
@@ -139,22 +141,22 @@
         </section>
 
         <section class="services container" aria-labelledby="services-title">
-          <h1 class="visually-hidden" id="services-title">Пополнение Steam и популярные сервисы</h1>
+          <h2 class="visually-hidden" id="services-title">Пополнение Steam и популярные сервисы</h2>
           <div class="services__list">
             <button class="service-card" type="button"><span class="service-card__icon"><img src="assets/figma/figma-asset-09.png" alt="Steam" /></span><span class="service-card__name">Steam</span></button>
             <button class="service-card" type="button"><span class="service-card__icon service-card__icon--telegram"><img src="assets/figma/figma-asset-10.png" alt="Telegram" /></span><span class="service-card__name">Telegram</span></button>
             <button class="service-card" type="button"><span class="service-card__icon service-card__icon--roblox"><img src="assets/figma/figma-asset-11.png" alt="Roblox" /></span><span class="service-card__name">Roblox</span></button>
             <button class="service-card" type="button"><span class="service-card__icon service-card__icon--brawl"><img src="assets/figma/figma-asset-12.png" alt="Brawl Stars" /></span><span class="service-card__name">Brawl Stars</span></button>
-            <button class="service-card" type="button"><span class="service-card__icon"><img src="assets/figma/figma-asset-13.png" alt="PUBG Mobile" /></span><span class="service-card__name">PUBG Mob...</span></button>
+            <button class="service-card" type="button" title="PUBG Mobile"><span class="service-card__icon"><img src="assets/figma/figma-asset-13.png" alt="PUBG Mobile" /></span><span class="service-card__name">PUBG Mob...</span></button>
             <button class="service-card" type="button"><span class="service-card__icon service-card__icon--appstore"><img src="assets/figma/figma-asset-14.png" alt="App Store" /></span><span class="service-card__name">App Store</span></button>
             <button class="service-card" type="button"><span class="service-card__icon service-card__icon--chatgpt"><img src="assets/figma/figma-asset-15.png" alt="ChatGPT" /></span><span class="service-card__name">ChatGPT</span></button>
             <button class="service-card" type="button"><span class="service-card__icon service-card__icon--playstation"><img src="assets/figma/figma-asset-16.png" alt="PlayStation" /></span><span class="service-card__name">PlayStation</span></button>
             <button class="service-card" type="button"><span class="service-card__icon service-card__icon--tiktok"><img src="assets/figma/tiktok-icon.png" alt="TikTok" /></span><span class="service-card__name">TikTok</span></button>
-            <button class="service-card" type="button"><span class="service-card__icon service-card__icon--mobile"><img src="assets/figma/figma-asset-18.png" alt="Mobile Legends" /></span><span class="service-card__name">Mobile Leg..</span></button>
+            <button class="service-card" type="button" title="Mobile Legends"><span class="service-card__icon service-card__icon--mobile"><img src="assets/figma/figma-asset-18.png" alt="Mobile Legends" /></span><span class="service-card__name">Mobile Leg..</span></button>
             <button class="service-card service-card--more" type="button"><span class="service-card__icon"><img src="assets/figma/figma-asset-19.svg" alt="Ещё сервисы" /></span><span class="service-card__name">еще 841</span></button>
           </div>
 
-          <div class="steam-topup">
+          <form class="steam-topup" action="#" method="get">
             <div class="steam-topup__app">
               <span class="steam-topup__icon"><img src="assets/figma/figma-asset-09.png" alt="Steam" /></span>
               <div class="steam-topup__info">
@@ -171,93 +173,94 @@
               </div>
             </div>
 
-            <label class="field field--login">
-              <span class="field__login-main">
-                <img src="assets/figma/figma-asset-20.svg" alt="Пользователь" width="20" height="20" />
-                <input type="text" placeholder="Логин Steam" />
-              </span>
-              <button class="field__hint" type="button" aria-label="Подсказка">i</button>
-            </label>
+            <div class="field field--login">
+              <label class="field__login-main">
+                <img src="assets/figma/figma-asset-20.svg" alt="" width="20" height="20" />
+                <span class="visually-hidden">Логин Steam</span>
+                <input type="text" name="steam-login" placeholder="Логин Steam" autocomplete="username" />
+              </label>
+              <button class="field__hint" type="button" aria-label="Подсказка по логину Steam">i</button>
+            </div>
 
             <div class="field field--amount">
               <div class="field__amount">
-                <img src="assets/figma/figma-asset-21.svg" alt="Сумма" width="20" height="20" />
+                <img src="assets/figma/figma-asset-21.svg" alt="" width="20" height="20" />
                 <span>Сумма</span>
-                <strong class="js-amount-label">500₽</strong>
+                <strong class="field__amount-value js-amount-label">500₽</strong>
               </div>
               <div class="currency js-currency" aria-label="Выбор валюты">
-                <button class="currency__button _active" type="button" data-currency="$">$</button>
-                <button class="currency__button" type="button" data-currency="₸">₸</button>
-                <button class="currency__button" type="button" data-currency="₽">₽</button>
+                <button class="currency__button" type="button" data-currency="$" aria-pressed="false">$</button>
+                <button class="currency__button" type="button" data-currency="₸" aria-pressed="false">₸</button>
+                <button class="currency__button _active" type="button" data-currency="₽" aria-pressed="true">₽</button>
               </div>
             </div>
 
-            <button class="steam-topup__pay js-pay-button" type="button">Оплатить 500$</button>
-          </div>
+            <button class="steam-topup__pay js-pay-button" type="submit">Оплатить 500₽</button>
+          </form>
         </section>
 
         <section class="products container" aria-labelledby="popular-title">
           <div class="products__header">
-            <h2 id="popular-title">Популярные товары</h2>
+            <h2 class="products__title" id="popular-title">Популярные товары</h2>
             <div class="products__tabs js-tabs">
-              <button class="products__tab active" type="button"><img src="assets/figma/figma-asset-22.svg" alt="Донат" width="14" height="14" />Донат</button>
-              <button class="products__tab" type="button"><img src="assets/figma/figma-asset-23.svg" alt="Подписки" width="14" height="14" />Подписки</button>
-              <button class="products__tab" type="button"><img src="assets/figma/figma-asset-24.svg" alt="Предметы" width="14" height="14" />Предметы</button>
-              <button class="products__tab" type="button"><img src="assets/figma/figma-asset-25.svg" alt="Аккаунты" width="14" height="14" />Аккаунты</button>
-              <button class="products__tab" type="button"><img src="assets/figma/figma-asset-26.svg" alt="Ключи" width="14" height="14" />Ключи</button>
-              <button class="products__tab" type="button"><img src="assets/figma/figma-asset-27.svg" alt="Игровая валюта" width="14" height="14" />Игровая валюта</button>
-              <button class="products__tab" type="button"><img src="assets/figma/figma-asset-28.svg" alt="Другое" width="14" height="14" />Другое</button>
+              <button class="products__tab _active" type="button" aria-pressed="true"><img src="assets/figma/figma-asset-22.svg" alt="" width="14" height="14" />Донат</button>
+              <button class="products__tab" type="button" aria-pressed="false"><img src="assets/figma/figma-asset-23.svg" alt="" width="14" height="14" />Подписки</button>
+              <button class="products__tab" type="button" aria-pressed="false"><img src="assets/figma/figma-asset-24.svg" alt="" width="14" height="14" />Предметы</button>
+              <button class="products__tab" type="button" aria-pressed="false"><img src="assets/figma/figma-asset-25.svg" alt="" width="14" height="14" />Аккаунты</button>
+              <button class="products__tab" type="button" aria-pressed="false"><img src="assets/figma/figma-asset-26.svg" alt="" width="14" height="14" />Ключи</button>
+              <button class="products__tab" type="button" aria-pressed="false"><img src="assets/figma/figma-asset-27.svg" alt="" width="14" height="14" />Игровая валюта</button>
+              <button class="products__tab" type="button" aria-pressed="false"><img src="assets/figma/figma-asset-28.svg" alt="" width="14" height="14" />Другое</button>
             </div>
           </div>
           <div class="products__grid">
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
           </div>
         </section>
 
         <section class="products container" aria-labelledby="recommended-title">
           <div class="products__header">
-            <h2 id="recommended-title">Рекомендованные товары</h2>
+            <h2 class="products__title" id="recommended-title">Рекомендованные товары</h2>
             <a class="products__all" href="#">Показать все</a>
           </div>
           <div class="products__grid">
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
           </div>
         </section>
 
         <section class="products products--compact container" aria-labelledby="other-title">
           <div class="products__header">
-            <h2 id="other-title">Другие товары</h2>
+            <h2 class="products__title" id="other-title">Другие товары</h2>
             <a class="products__all" href="#">Показать все</a>
           </div>
           <div class="products__grid">
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
-            <article class="product-card"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3>💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p><strong>990 ₽</strong><span>1 990 ₽</span></p><button type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            <article class="product-card"><img class="product-card__image" src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><div class="product-card__body"><h3 class="product-card__title">💥 DOOM 2016 💀 STEAM KEY 🔑 РФ+СНГ</h3><p class="product-card__prices"><strong class="product-card__price">990 ₽</strong><span class="product-card__old-price">1 990 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
           </div>
         </section>
 
         <section class="reviews container" aria-labelledby="reviews-title">
           <div class="reviews__header">
             <div>
-              <h2 id="reviews-title">Последние отзывы</h2>
-              <p>Все отзывы взяты с независимой площадки</p>
+              <h2 class="reviews__title" id="reviews-title">Последние отзывы</h2>
+              <p class="reviews__subtitle">Все отзывы взяты с независимой площадки</p>
             </div>
-            <a class="products__all" href="#">Показать все</a>
+            <a class="reviews__all" href="#">Показать все</a>
           </div>
           <div class="reviews__grid">
-            <article class="review-card"><div class="review-card__top"><img class="review-card__avatar" src="assets/figma/avatar-bizidin.jpg" alt="Bizidin" width="48" height="48" /><div><h3>Bizidin</h3><p class="review-card__rating"><span class="review-card__stars" aria-hidden="true">★★★★★</span><span class="review-card__score">5.0</span></p></div><time>Сегодня в 11:48</time></div><p class="review-card__text">Отзывчивый и приятный продавец, помог не только с товаром но и с другим вопросом. Рекомендую!</p><div class="review-card__product"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><span>🌸 FunTime | Полностью готовый сервер под ключ ⚡</span><strong>139₽</strong></div></article>
-            <article class="review-card"><div class="review-card__top"><img class="review-card__avatar" src="assets/figma/avatar-bizidin.jpg" alt="Bizidin" width="48" height="48" /><div><h3>Bizidin</h3><p class="review-card__rating"><span class="review-card__stars" aria-hidden="true">★★★★★</span><span class="review-card__score">5.0</span></p></div><time>Сегодня в 11:48</time></div><p class="review-card__text">Отзывчивый и приятный продавец, помог не только с товаром но и с другим вопросом. Рекомендую!</p><div class="review-card__product"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><span>🌸 FunTime | Полностью готовый сервер под ключ ⚡</span><strong>139₽</strong></div></article>
-            <article class="review-card"><div class="review-card__top"><img class="review-card__avatar" src="assets/figma/avatar-bizidin.jpg" alt="Bizidin" width="48" height="48" /><div><h3>Bizidin</h3><p class="review-card__rating"><span class="review-card__stars" aria-hidden="true">★★★★★</span><span class="review-card__score">5.0</span></p></div><time>Сегодня в 11:48</time></div><p class="review-card__text">Отзывчивый и приятный продавец, помог не только с товаром но и с другим вопросом. Рекомендую!</p><div class="review-card__product"><img src="assets/figma/product-doom-hires.jpg" alt="DOOM 2016 STEAM KEY" /><span>🌸 FunTime | Полностью готовый сервер под ключ ⚡</span><strong>139₽</strong></div></article>
+            <article class="review-card"><div class="review-card__top"><img class="review-card__avatar" src="assets/figma/avatar-bizidin.jpg" alt="Bizidin" width="48" height="48" /><div><h3 class="review-card__name">Bizidin</h3><p class="review-card__rating"><span class="review-card__stars" aria-hidden="true">★★★★★</span><span class="review-card__score">5.0</span></p></div><time class="review-card__date" datetime="2026-07-15T11:48:00">Сегодня в 11:48</time></div><p class="review-card__text">Отзывчивый и приятный продавец, помог не только с товаром но и с другим вопросом. Рекомендую!</p><div class="review-card__product"><img class="review-card__product-image" src="assets/figma/product-doom-hires.jpg" alt="FunTime сервер" /><span class="review-card__product-name">🌸 FunTime | Полностью готовый сервер под ключ ⚡</span><strong class="review-card__price">139₽</strong></div></article>
+            <article class="review-card"><div class="review-card__top"><img class="review-card__avatar" src="assets/figma/avatar-bizidin.jpg" alt="Bizidin" width="48" height="48" /><div><h3 class="review-card__name">Bizidin</h3><p class="review-card__rating"><span class="review-card__stars" aria-hidden="true">★★★★★</span><span class="review-card__score">5.0</span></p></div><time class="review-card__date" datetime="2026-07-15T11:48:00">Сегодня в 11:48</time></div><p class="review-card__text">Отзывчивый и приятный продавец, помог не только с товаром но и с другим вопросом. Рекомендую!</p><div class="review-card__product"><img class="review-card__product-image" src="assets/figma/product-doom-hires.jpg" alt="FunTime сервер" /><span class="review-card__product-name">🌸 FunTime | Полностью готовый сервер под ключ ⚡</span><strong class="review-card__price">139₽</strong></div></article>
+            <article class="review-card"><div class="review-card__top"><img class="review-card__avatar" src="assets/figma/avatar-bizidin.jpg" alt="Bizidin" width="48" height="48" /><div><h3 class="review-card__name">Bizidin</h3><p class="review-card__rating"><span class="review-card__stars" aria-hidden="true">★★★★★</span><span class="review-card__score">5.0</span></p></div><time class="review-card__date" datetime="2026-07-15T11:48:00">Сегодня в 11:48</time></div><p class="review-card__text">Отзывчивый и приятный продавец, помог не только с товаром но и с другим вопросом. Рекомендую!</p><div class="review-card__product"><img class="review-card__product-image" src="assets/figma/product-doom-hires.jpg" alt="FunTime сервер" /><span class="review-card__product-name">🌸 FunTime | Полностью готовый сервер под ключ ⚡</span><strong class="review-card__price">139₽</strong></div></article>
           </div>
         </section>
       </main>
@@ -285,8 +288,8 @@
               <img src="assets/figma/footer-social-youtube.svg" alt="YouTube" width="18" height="18" />
             </a>
           </div>
-          <div class="footer__payments" aria-label="Способы оплаты">
-            <span class="footer__pay footer__pay--visa" title="Visa">VISA</span>
+          <div class="footer__payments" role="group" aria-label="Способы оплаты">
+            <span class="footer__pay footer__pay--visa" title="Visa"><span>VISA</span></span>
             <span class="footer__pay footer__pay--mir" title="Мир">мир</span>
             <span class="footer__pay footer__pay--mc" title="Mastercard">
               <img src="assets/figma/footer-pay-mastercard.svg" alt="Mastercard" width="29" height="18" />

@@ -8,9 +8,11 @@ export const initTabs = () => {
       }
 
       tabs.querySelectorAll(".products__tab").forEach((item) => {
-        item.classList.remove("active");
+        item.classList.remove("_active");
+        item.setAttribute("aria-pressed", "false");
       });
-      tab.classList.add("active");
+      tab.classList.add("_active");
+      tab.setAttribute("aria-pressed", "true");
     });
   });
 };

@@ -22,11 +22,15 @@
   font-size: 15px;
   line-height: 18px;
   color: var(--color-footer-nav);
-  transition: color 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--default-transition);
 }
 
-.footer__nav a:hover {
-  color: var(--color-black);
+@media (hover: hover) {
+  .footer__nav a:hover {
+    color: var(--color-black);
+  }
 }
 
 .footer__middle {
@@ -36,6 +40,7 @@
   width: 100%;
   min-height: 78px;
   padding: 22px 0;
+  border-top: 1px solid var(--color-border-soft);
 }
 
 .footer__socials {
@@ -50,6 +55,8 @@
   align-items: center;
   width: 34px;
   height: 34px;
+  cursor: pointer;
+  user-select: none;
   background: var(--color-social-bg);
   border-radius: var(--radius-md);
 }
@@ -74,12 +81,16 @@
 }
 
 .footer__pay--visa {
+  color: var(--color-visa);
+}
+
+.footer__pay--visa > span {
+  display: inline-block;
   font-style: italic;
   font-weight: 900;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: -0.02em;
-  color: var(--color-visa);
   transform: skewX(-8deg);
 }
 
@@ -114,9 +125,13 @@
   font-size: 14px;
   line-height: 17px;
   color: var(--color-footer-muted);
-  transition: color 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--default-transition);
 }
 
-.footer__bottom a:hover {
-  color: var(--color-black);
+@media (hover: hover) {
+  .footer__bottom a:hover {
+    color: var(--color-black);
+  }
 }

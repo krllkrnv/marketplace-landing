@@ -53,4 +53,5 @@
   --radius-pill: 9999px;
   --container: 1200px;
   --frame: 1280px;
+  --default-transition: 0.2s ease;
 }

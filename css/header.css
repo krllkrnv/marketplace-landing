@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 20;
   width: 100%;
 }
 
@@ -11,7 +13,6 @@
 
 .header__spacer {
   flex: 0 0 192px;
-  width: 192px;
 }
 
 .header__catalog {
@@ -24,11 +25,13 @@
   color: var(--color-surface);
   background: var(--color-black);
   border-radius: var(--radius-md);
-  transition: transform 0.2s ease;
+  transition: transform var(--default-transition);
 }
 
-.header__catalog:hover {
-  transform: translateY(-1px);
+@media (hover: hover) {
+  .header__catalog:hover {
+    transform: translateY(-1px);
+  }
 }
 
 .header__catalog img {
@@ -72,6 +75,11 @@
   background: transparent;
   border: 0;
   outline: none;
+}
+
+.header__search-input:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-steam);
 }
 
 .header__search-input::placeholder {

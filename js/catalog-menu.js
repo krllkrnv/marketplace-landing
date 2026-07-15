@@ -6,41 +6,55 @@ export const initCatalogMenu = () => {
     return;
   }
 
-  const closeMenu = () => {
-    menu.classList.remove("is-open");
+  const isOpen = () => menu.classList.contains("_opened");
+
+  const closeMenu = ({ restoreFocus = false } = {}) => {
+    if (!isOpen()) {
+      return;
+    }
+
+    menu.classList.remove("_opened");
     menu.setAttribute("aria-hidden", "true");
     toggle.setAttribute("aria-expanded", "false");
+
+    if (restoreFocus) {
+      toggle.focus();
+    }
   };
 
   const openMenu = () => {
-    menu.classList.add("is-open");
+    menu.classList.add("_opened");
     menu.setAttribute("aria-hidden", "false");
     toggle.setAttribute("aria-expanded", "true");
   };
 
   toggle.addEventListener("click", (event) => {
     event.stopPropagation();
-    menu.classList.contains("is-open") ? closeMenu() : openMenu();
+    isOpen() ? closeMenu() : openMenu();
   });
 
   menu.addEventListener("click", (event) => {
     event.stopPropagation();
   });
 
-  document.addEventListener("click", closeMenu);
+  document.addEventListener("click", () => {
+    closeMenu();
+  });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
+    if (event.key === "Escape" && isOpen()) {
+      closeMenu({ restoreFocus: true });
     }
   });
 
   menu.querySelectorAll(".catalog__category").forEach((button) => {
     button.addEventListener("click", () => {
       menu.querySelectorAll(".catalog__category").forEach((item) => {
-        item.classList.remove("catalog__category--active");
+        item.classList.remove("_active");
+        item.setAttribute("aria-pressed", "false");
       });
-      button.classList.add("catalog__category--active");
+      button.classList.add("_active");
+      button.setAttribute("aria-pressed", "true");
     });
   });
 };

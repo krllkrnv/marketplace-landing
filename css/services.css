@@ -33,7 +33,8 @@
   background: transparent;
 }
 
-.service-card__icon {
+.service-card__icon,
+.steam-topup__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,16 +42,27 @@
   height: 76px;
   padding: 2px;
   border-radius: var(--radius-icon-wrap);
-  transition: background 0.15s ease, box-shadow 0.15s ease, border-radius 0.15s ease;
 }
 
-.service-card__icon img {
+.service-card__icon {
+  transition: background var(--default-transition), box-shadow var(--default-transition), border-radius var(--default-transition);
+}
+
+.steam-topup__icon {
+  flex-shrink: 0;
+}
+
+.service-card__icon img,
+.steam-topup__icon img {
   width: 72px;
   height: 72px;
   object-fit: cover;
   border: 2px solid var(--color-steam);
   border-radius: var(--radius-xl);
-  transition: border-color 0.15s ease;
+}
+
+.service-card__icon img {
+  transition: border-color var(--default-transition);
 }
 
 .service-card__icon--telegram img {
@@ -95,16 +107,16 @@
   white-space: nowrap;
 }
 
-.service-card:hover .service-card__icon,
-.service-card--active .service-card__icon {
-  background: var(--color-black);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-icon);
-}
+@media (hover: hover) {
+  .service-card:hover .service-card__icon {
+    background: var(--color-black);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-icon);
+  }
 
-.service-card:hover .service-card__icon img,
-.service-card--active .service-card__icon img {
-  border-color: var(--color-surface);
+  .service-card:hover .service-card__icon img {
+    border-color: var(--color-surface);
+  }
 }
 
 .service-card--more .service-card__name {
@@ -112,13 +124,10 @@
 }
 
 .service-card--more .service-card__icon img {
-  width: 72px;
-  height: 72px;
   padding: 20px;
   object-fit: contain;
   background: var(--color-panel-line);
   border: 2px solid var(--color-service-more-border);
-  border-radius: var(--radius-xl);
 }
 
 .steam-topup {
@@ -136,25 +145,6 @@
   width: 290px;
   height: 76px;
   gap: 12px;
-}
-
-.steam-topup__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  width: 76px;
-  height: 76px;
-  padding: 2px;
-  border-radius: var(--radius-icon-wrap);
-}
-
-.steam-topup__icon img {
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
-  border: 2px solid var(--color-steam);
-  border-radius: var(--radius-xl);
 }
 
 .steam-topup__info {
@@ -257,6 +247,11 @@
   outline: none;
 }
 
+.field--login input:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-steam);
+}
+
 .field--login input::placeholder {
   color: var(--color-muted);
   opacity: 1;
@@ -326,11 +321,13 @@
   font-weight: 800;
   background: var(--color-line);
   border-radius: var(--radius-sm);
-  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  transition: color var(--default-transition), background var(--default-transition), transform var(--default-transition);
 }
 
-.currency__button:hover {
-  transform: translateY(-1px);
+@media (hover: hover) {
+  .currency__button:hover {
+    transform: translateY(-1px);
+  }
 }
 
 .currency__button._active {
@@ -347,10 +344,12 @@
   font-weight: 800;
   background: var(--color-black);
   border-radius: var(--radius-lg);
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform var(--default-transition), opacity var(--default-transition);
 }
 
-.steam-topup__pay:hover {
-  transform: translateY(-1px);
-  opacity: 0.9;
+@media (hover: hover) {
+  .steam-topup__pay:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+  }
 }
