@@ -20,8 +20,8 @@
 
 .catalog__container {
   display: flex;
+  width: 100%;
   min-height: 585px;
-  margin-top: 0;
   background: var(--color-surface);
   border-top: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
@@ -81,7 +81,7 @@
   gap: 12px;
   align-items: flex-start;
   color: var(--color-text);
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.5;
 }
 

@@ -5,7 +5,6 @@
 }
 
 html {
-  min-width: 1280px;
   background: var(--color-bg);
 }
 
@@ -13,7 +12,7 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-text);
   background: var(--color-bg);
 }
@@ -40,11 +39,23 @@ a {
 
 .page {
   min-height: 100vh;
+  background: var(--color-bg);
+}
+
+.page__panel {
+  width: 100%;
+  max-width: var(--frame);
+  min-height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
   padding-bottom: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--color-panel-line);
 }
 
 .container {
-  width: var(--container);
+  width: 100%;
+  max-width: var(--container);
   margin-right: auto;
   margin-left: auto;
 }
