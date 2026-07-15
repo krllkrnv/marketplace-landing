@@ -1,0 +1,21 @@
+:root {
+  --color-black: #000;
+  --color-text: #363636;
+  --color-title: #14181d;
+  --color-muted: #8a94a6;
+  --color-line: #e8eaed;
+  --color-border: #f1f2f5;
+  --color-bg: #f2f4f7;
+  --color-surface: #fff;
+  --color-field: #f4f5f7;
+  --color-green: #4c9a2a;
+  --color-badge: #6eb83f;
+  --shadow-card: 0 10px 34px rgba(20, 40, 80, 0.08);
+  --shadow-product: 0 11px 25px rgba(20, 40, 80, 0.1);
+  --shadow-product-hover: 0 18px 36px rgba(20, 40, 80, 0.16);
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --container: 1200px;
+}

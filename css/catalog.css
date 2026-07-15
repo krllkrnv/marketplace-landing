@@ -1,0 +1,114 @@
+.catalog {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 0;
+  z-index: 15;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.catalog.is-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.catalog__container {
+  display: flex;
+  min-height: 585px;
+  margin-top: 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.catalog__sidebar {
+  width: 320px;
+  padding: 16px 1px 16px 0;
+  border-right: 1px solid var(--color-border);
+}
+
+.catalog__category {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 24px;
+  color: var(--color-text);
+  text-align: left;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.catalog__category::after {
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.catalog__category:hover,
+.catalog__category--active {
+  color: #16181d;
+  background: var(--color-field);
+}
+
+.catalog__content {
+  flex: 1;
+  padding: 40px 32px;
+  overflow: hidden;
+}
+
+.catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 32px;
+  row-gap: 40px;
+}
+
+.catalog__group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--color-text);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.catalog__title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  color: #16181d;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+}
+
+.catalog__title::after {
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.catalog__group a:not(.catalog__title) {
+  transition: color 0.2s ease;
+}
+
+.catalog__group a:not(.catalog__title):hover {
+  color: var(--color-black);
+}

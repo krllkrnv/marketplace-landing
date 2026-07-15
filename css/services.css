@@ -1,0 +1,271 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.services__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 76px;
+  gap: 8px;
+  padding: 0;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.16px;
+  background: transparent;
+}
+
+.service-card__icon {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  padding: 2px;
+  place-items: center;
+  background: transparent;
+  border-radius: 16px;
+  transition: background 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.service-card__icon img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border: 2px solid rgba(20, 130, 179, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 8px #d1d9e4;
+}
+
+.service-card__icon--dark img {
+  background: var(--color-black);
+}
+
+.service-card:hover,
+.service-card--active {
+  color: var(--color-black);
+}
+
+.service-card:hover .service-card__icon,
+.service-card--active .service-card__icon {
+  background: var(--color-black);
+  box-shadow: 0 4px 4px #d1d9e4;
+  transform: translateY(-2px);
+}
+
+.service-card:hover .service-card__icon img,
+.service-card--active .service-card__icon img {
+  border: 3px solid var(--color-surface);
+  box-shadow: none;
+}
+
+.service-card--more {
+  color: var(--color-muted);
+}
+
+.service-card--more .service-card__icon {
+  background: var(--color-field);
+}
+
+.service-card--more .service-card__icon img {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  box-shadow: none;
+}
+
+.steam-topup {
+  display: grid;
+  grid-template-columns: 286px minmax(0, 1fr) minmax(0, 1.2fr) 200px;
+  gap: 16px;
+  align-items: center;
+}
+
+.steam-topup__app {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.steam-topup__icon {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  padding: 2px;
+  place-items: center;
+  border-radius: 14px;
+}
+
+.steam-topup__icon img {
+  width: 72px;
+  height: 72px;
+  border: 2px solid #1482b3;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px #d1d9e4;
+}
+
+.steam-topup__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.steam-topup__title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.steam-topup__title-row strong {
+  color: var(--color-text);
+}
+
+.steam-topup__title-row span {
+  padding: 5px 8px 4px;
+  color: var(--color-surface);
+  font-size: 11px;
+  line-height: 11px;
+  background: var(--color-badge);
+  border-radius: 9999px;
+}
+
+.steam-topup__promo {
+  align-self: flex-start;
+  padding: 4px 12px;
+  color: var(--color-black);
+  font-size: 12px;
+  background: rgba(38, 139, 243, 0.1);
+  border-radius: var(--radius-sm);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  background: var(--color-field);
+  border-radius: var(--radius-lg);
+}
+
+.field--login {
+  max-width: 300px;
+  padding: 0 12px 0 20px;
+}
+
+.field--login > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+}
+
+.field--login input {
+  min-width: 0;
+  flex: 1;
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+
+.field--login input::placeholder {
+  color: var(--color-muted);
+}
+
+.field--login button {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  color: var(--color-surface);
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-style: italic;
+  background: #a0a8b5;
+  border-radius: 6px;
+}
+
+.field--amount {
+  justify-content: space-between;
+  max-width: 380px;
+  padding: 0 16px;
+}
+
+.field__amount {
+  display: grid;
+  grid-template-columns: 20px auto;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.field__amount img {
+  grid-row: span 2;
+  width: 20px;
+  height: 20px;
+}
+
+.field__amount span {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.field__amount strong {
+  color: var(--color-text);
+  font-size: 18px;
+}
+
+.currency {
+  display: flex;
+  gap: 6px;
+}
+
+.currency__button {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  color: var(--color-muted);
+  font-size: 16px;
+  font-weight: 800;
+  background: var(--color-line);
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.currency__button:hover {
+  transform: translateY(-1px);
+}
+
+.currency__button._active {
+  color: var(--color-surface);
+  background: var(--color-black);
+}
+
+.steam-topup__pay {
+  display: grid;
+  height: 64px;
+  place-items: center;
+  color: var(--color-surface);
+  font-size: 16px;
+  font-weight: 800;
+  background: var(--color-black);
+  border-radius: var(--radius-lg);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.steam-topup__pay:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
