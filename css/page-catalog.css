@@ -1,0 +1,113 @@
+.page-catalog {
+  gap: 20px;
+}
+
+.page-catalog__categories {
+  margin-bottom: 16px;
+  padding: 17px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-catalog__categories .products__tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.page-catalog__categories .products__tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.page-catalog__categories .products__tab {
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0 16px;
+  white-space: nowrap;
+  background: transparent;
+  box-shadow: none;
+}
+
+.page-catalog__categories .products__tab._active {
+  background: var(--color-black);
+  box-shadow: var(--shadow-tab-active);
+}
+
+.page-catalog__body {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.page-catalog__results {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.page-catalog__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  min-height: 16px;
+}
+
+.page-catalog__count {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-muted);
+}
+
+.products__grid--catalog {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.products__grid--catalog .product-card {
+  flex: initial;
+}
+
+.products__grid--catalog .product-card__image,
+.official__slider .product-card__image {
+  height: 146px;
+}
+
+.products__grid--catalog .product-card__title,
+.official__slider .product-card__title {
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.products__grid--catalog .product-card__price,
+.official__slider .product-card__price {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.products__grid--catalog .product-card__old-price,
+.official__slider .product-card__old-price {
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-hint);
+}
+
+.products__grid--catalog .product-card__buy,
+.official__slider .product-card__buy {
+  height: 48px;
+  font-size: 15px;
+  border-radius: 11px;
+}

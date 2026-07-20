@@ -11,8 +11,11 @@
   border-bottom: 1px solid var(--color-panel-line);
 }
 
-.header__spacer {
+.header__home {
   flex: 0 0 192px;
+  display: block;
+  height: 40px;
+  border-radius: var(--radius-md);
 }
 
 .header__catalog {

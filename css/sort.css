@@ -1,0 +1,69 @@
+.sort {
+  position: relative;
+}
+
+.sort__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 16px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-ink);
+  background: transparent;
+}
+
+.sort__icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sort__list {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 20;
+  min-width: 200px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.sort__list[hidden] {
+  display: none;
+}
+
+.sort__option {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  color: var(--color-ink);
+  background: transparent;
+  border-radius: var(--radius-sm);
+  transition: background var(--default-transition);
+}
+
+@media (hover: hover) {
+  .sort__option:hover {
+    background: var(--color-field);
+  }
+}
+
+.sort__option._active {
+  background: var(--color-field);
+}
+
+.sort._opened .sort__trigger {
+  opacity: 0.8;
+}

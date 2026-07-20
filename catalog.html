@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог — магазин цифровых товаров</title>
+    <meta name="description" content="Каталог ключей, пополнений, подписок и гифт-карт для геймеров." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/catalog.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/official.css" />
+    <link rel="stylesheet" href="css/page-catalog.css" />
+    <link rel="stylesheet" href="css/filters.css" />
+    <link rel="stylesheet" href="css/sort.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="page__panel">
+      <header class="header">
+        <div class="header__container container">
+          <a class="header__home" href="index.html" aria-label="На главную"></a>
+
+          <button class="header__catalog js-catalog-toggle" type="button" aria-expanded="false" aria-controls="catalog-menu">
+            <img src="assets/icons/catalog.svg" alt="" width="20" height="20" />
+            <span>Каталог</span>
+          </button>
+
+          <form class="header__search" action="#">
+            <div class="header__search-field">
+              <input class="header__search-input" type="search" name="q" placeholder="Игра, приложение или услуга..." aria-label="Игра, приложение или услуга" />
+              <button class="header__favorite" type="button" aria-label="Избранное">
+                <img src="assets/icons/favorite.svg" alt="" width="14" height="13" />
+              </button>
+            </div>
+            <button class="header__search-button" type="submit" aria-label="Найти">
+              <img src="assets/icons/search.svg" alt="" width="20" height="20" />
+            </button>
+          </form>
+
+          <button class="header__profile" type="button" aria-label="Профиль">
+            <img src="assets/icons/profile.svg" alt="" width="20" height="20" />
+          </button>
+        </div>
+
+        <div class="catalog js-catalog-menu" id="catalog-menu" aria-hidden="true">
+          <div class="catalog__container">
+            <aside class="catalog__sidebar" aria-label="Категории каталога">
+              <button class="catalog__category _active" aria-pressed="true" type="button">Игры и игровые сервисы</button>
+              <button class="catalog__category" aria-pressed="false" type="button">Игровые ценности</button>
+              <button class="catalog__category" aria-pressed="false" type="button">Мобильные игры</button>
+              <button class="catalog__category" aria-pressed="false" type="button">Сервисы и соцсети</button>
+              <button class="catalog__category" aria-pressed="false" type="button">Программы</button>
+            </aside>
+
+            <div class="catalog__content">
+              <div class="catalog__grid">
+                <div class="catalog__group">
+                  <a class="catalog__title" href="catalog.html">Steam</a>
+                  <a href="catalog.html">Все товары</a>
+                  <a href="#">Игры и DLC</a>
+                  <a href="#">Пополнение баланса</a>
+                  <a href="#">Подарочные карты</a>
+                  <a href="#">Коллекционные карточки</a>
+                </div>
+                <div class="catalog__group">
+                  <a class="catalog__title" href="#">PlayStation</a>
+                  <a href="#">Игры и DLC</a>
+                  <a href="#">Пополнение баланса</a>
+                  <a href="#">Новые аккаунты</a>
+                  <a href="#">PS Plus</a>
+                  <a href="#">EA Play</a>
+                </div>
+                <div class="catalog__group">
+                  <a class="catalog__title" href="#">Xbox</a>
+                  <a href="#">Игры и DLC</a>
+                  <a href="#">Пополнение баланса</a>
+                  <a href="#">Новые аккаунты</a>
+                  <a href="#">Xbox Game Pass</a>
+                  <a href="#">Услуги</a>
+                </div>
+                <div class="catalog__group">
+                  <a class="catalog__title" href="#">Nintendo</a>
+                  <a href="#">Игры и DLC</a>
+                  <a href="#">Подарочные карты</a>
+                  <a href="#">Новые аккаунты</a>
+                  <a href="#">NS Online</a>
+                </div>
+                <div class="catalog__group">
+                  <a class="catalog__title" href="#">Battle.net</a>
+                  <a href="#">World of Warcraft</a>
+                  <a href="#">Подарочные карты</a>
+                  <a href="#">Прямое пополнение</a>
+                  <a href="#">Новые аккаунты</a>
+                  <a href="#">Смена региона</a>
+                </div>
+                <div class="catalog__group">
+                  <a class="catalog__title" href="#">Подборки</a>
+                  <a href="#">Скидки 90%</a>
+                  <a href="#">Популярные издатели</a>
+                  <a href="#">Лучшие серии игр</a>
+                  <a href="#">Steam Deck</a>
+                  <a href="#">Bundle-наборы</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main page-catalog">
+        <h1 class="visually-hidden">Каталог товаров</h1>
+
+        <section class="official container" aria-labelledby="official-title">
+          <div class="official__header">
+            <div class="official__title-wrap">
+              <img class="official__icon" src="assets/icons/official-badge.svg" alt="" width="30" height="30" />
+              <h2 class="official__title" id="official-title">Официально</h2>
+            </div>
+            <div class="official__pager">
+              <button class="official__arrow js-official-prev" type="button" aria-label="Предыдущие товары">
+                <img src="assets/icons/official-chevron-left.svg" alt="" width="18" height="18" />
+              </button>
+              <span class="official__counter">125</span>
+              <button class="official__arrow js-official-next" type="button" aria-label="Следующие товары">
+                <img src="assets/icons/official-chevron.svg" alt="" width="18" height="18" />
+              </button>
+            </div>
+          </div>
+          <div class="official__slider swiper js-official-slider">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide"><article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article></div>
+            <div class="swiper-slide"><article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article></div>
+            <div class="swiper-slide"><article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article></div>
+            <div class="swiper-slide"><article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article></div>
+            <div class="swiper-slide"><article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article></div>
+            <div class="swiper-slide"><article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article></div>
+            <div class="swiper-slide"><article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article></div>
+            <div class="swiper-slide"><article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article></div>
+            </div>
+          </div>
+        </section>
+
+
+        <div class="page-catalog__body container">
+          <aside class="filters js-filters" aria-label="Фильтры">
+            <div class="filters__group _opened">
+              <button class="filters__head js-filters-toggle" type="button" aria-expanded="true">
+                <span>Способ получения</span>
+                <img class="filters__chevron" src="assets/icons/filter-chevron.svg" alt="" width="17" height="16" />
+              </button>
+              <div class="filters__body">
+                <div class="filters__body-inner">
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="delivery" value="Без входа в аккаунт" />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Без входа в аккаунт</span>
+                  </label>
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="delivery" value="Со входом в аккаунт" checked />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Со входом в аккаунт</span>
+                  </label>
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="delivery" value="Аккаунт с лицензией" />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Аккаунт с лицензией</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="filters__group _opened">
+              <button class="filters__head js-filters-toggle" type="button" aria-expanded="true">
+                <span>Тип</span>
+                <img class="filters__chevron" src="assets/icons/filter-chevron.svg" alt="" width="17" height="16" />
+              </button>
+              <div class="filters__body">
+                <div class="filters__body-inner">
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="type" value="Валюта" />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Валюта</span>
+                  </label>
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="type" value="Кейсы" checked />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Кейсы</span>
+                  </label>
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="type" value="Привилегии" />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Привилегии</span>
+                  </label>
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="type" value="Киты" />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Киты</span>
+                  </label>
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="type" value="Разбан" />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Разбан</span>
+                  </label>
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="type" value="Размут" />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Размут</span>
+                  </label>
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="type" value="Пропуск" />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Пропуск</span>
+                  </label>
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="type" value="Другое" />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Другое</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="filters__group _opened">
+              <button class="filters__head js-filters-toggle" type="button" aria-expanded="true">
+                <span>Цена</span>
+                <img class="filters__chevron" src="assets/icons/filter-chevron.svg" alt="" width="17" height="16" />
+              </button>
+              <div class="filters__body">
+                <div class="filters__body-inner">
+                  <div class="price-range js-price-range" data-min="500" data-max="1000000" data-default-min="500" data-default-max="500000">
+                    <div class="price-range__fields">
+                      <label class="price-range__field">
+                        <span class="price-range__prefix">от</span>
+                        <input class="price-range__input js-price-input-min" type="text" inputmode="numeric" value="500" aria-label="Цена от" />
+                        <span class="price-range__suffix">₽</span>
+                      </label>
+                      <label class="price-range__field">
+                        <span class="price-range__prefix">до</span>
+                        <input class="price-range__input js-price-input-max" type="text" inputmode="numeric" value="500000" aria-label="Цена до" />
+                        <span class="price-range__suffix">₽</span>
+                      </label>
+                    </div>
+                    <div class="price-range__slider">
+                      <div class="price-range__track" aria-hidden="true"></div>
+                      <div class="price-range__fill js-price-fill" aria-hidden="true"></div>
+                      <input class="price-range__thumb js-price-thumb-min" type="range" min="500" max="1000000" step="100" value="500" aria-label="Минимальная цена" />
+                      <input class="price-range__thumb js-price-thumb-max" type="range" min="500" max="1000000" step="100" value="500000" aria-label="Максимальная цена" />
+                    </div>
+                    <div class="price-range__scale" aria-hidden="true">
+                      <span>500</span>
+                      <span>1000000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="filters__group _opened">
+              <button class="filters__head js-filters-toggle" type="button" aria-expanded="true">
+                <span>Сервисы</span>
+                <img class="filters__chevron" src="assets/icons/filter-chevron.svg" alt="" width="17" height="16" />
+              </button>
+              <div class="filters__body">
+                <div class="filters__body-inner">
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="service" value="Steam" />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">Steam</span>
+                  </label>
+                  <label class="filters-checkbox">
+                    <input class="filters-checkbox__input" type="checkbox" name="service" value="xBox" checked />
+                    <span class="filters-checkbox__box" aria-hidden="true"><img src="assets/icons/check-white.svg" alt="" width="10" height="10" /></span>
+                    <span class="filters-checkbox__text">xBox</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="filters__actions">
+              <button class="filters__apply" type="button">Применить</button>
+              <button class="filters__reset js-filters-reset" type="button">Сбросить</button>
+            </div>
+          </aside>
+
+          <section class="page-catalog__results" aria-label="Товары">
+            <div class="page-catalog__categories">
+              <div class="products__tabs js-tabs">
+                <button class="products__tab _active" type="button" aria-pressed="true"><img src="assets/icons/tab-donate.svg" alt="" width="14" height="14" />Донат</button>
+                <button class="products__tab" type="button" aria-pressed="false"><img src="assets/icons/tab-subscriptions.svg" alt="" width="14" height="14" />Подписки</button>
+                <button class="products__tab" type="button" aria-pressed="false"><img src="assets/icons/tab-items.svg" alt="" width="14" height="14" />Предметы</button>
+                <button class="products__tab" type="button" aria-pressed="false"><img src="assets/icons/tab-accounts.svg" alt="" width="14" height="14" />Аккаунты</button>
+                <button class="products__tab" type="button" aria-pressed="false"><img src="assets/icons/tab-keys.svg" alt="" width="14" height="14" />Ключи</button>
+                <button class="products__tab" type="button" aria-pressed="false"><img src="assets/icons/tab-currency.svg" alt="" width="14" height="14" />Игровая валюта</button>
+                <button class="products__tab" type="button" aria-pressed="false"><img src="assets/icons/tab-other.svg" alt="" width="14" height="14" />Другое</button>
+                <button class="products__tab" type="button" aria-pressed="false"><img src="assets/icons/tab-services.svg" alt="" width="14" height="14" />Услуги</button>
+              </div>
+            </div>
+            <div class="page-catalog__toolbar">
+              <p class="page-catalog__count">Всего 321 товар</p>
+              <div class="sort js-sort">
+                <button class="sort__trigger js-sort-toggle" type="button" aria-expanded="false" aria-haspopup="listbox">
+                  <span class="sort__icons" aria-hidden="true">
+                    <img src="assets/icons/sort-arrows.svg" alt="" width="16" height="16" />
+                    <img src="assets/icons/sort-menu.svg" alt="" width="16" height="16" />
+                  </span>
+                  <span class="sort__label js-sort-label">По умолчанию</span>
+                </button>
+                <ul class="sort__list js-sort-list" role="listbox" hidden>
+                  <li><button class="sort__option _active js-sort-option" type="button" role="option" aria-selected="true">По умолчанию</button></li>
+                  <li><button class="sort__option js-sort-option" type="button" role="option" aria-selected="false">Сначала дешевые</button></li>
+                  <li><button class="sort__option js-sort-option" type="button" role="option" aria-selected="false">Сначала дорогие</button></li>
+                  <li><button class="sort__option js-sort-option" type="button" role="option" aria-selected="false">По популярности</button></li>
+                </ul>
+              </div>
+            </div>
+            <div class="products__grid products__grid--catalog">
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+              <article class="product-card"><img class="product-card__image" src="assets/images/product-pubg.png" alt="PUBG Mobile UC" width="227" height="152" /><div class="product-card__body"><h3 class="product-card__title">PUBG Mobile UC</h3><p class="product-card__prices"><strong class="product-card__price">49.99 ₽</strong><span class="product-card__old-price">249 ₽</span></p><button class="product-card__buy" type="button">Купить</button></div></article>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer container">
+        <nav class="footer__nav" aria-label="Нижняя навигация">
+          <a href="#">Стать продавцом</a>
+          <a href="#">Бонусы</a>
+          <a href="#">Поддержка</a>
+          <a href="#">Гарантии</a>
+          <a href="#">Отзывы</a>
+        </nav>
+        <div class="footer__middle">
+          <div class="footer__socials">
+            <a href="#" aria-label="VK">
+              <img src="assets/icons/social-vk.svg" alt="ВКонтакте" width="18" height="10" />
+            </a>
+            <a href="#" aria-label="Telegram">
+              <img src="assets/icons/social-telegram.svg" alt="Telegram" width="18" height="16" />
+            </a>
+            <a href="#" aria-label="App Store">
+              <img src="assets/icons/social-apple.svg" alt="App Store" width="14" height="17" />
+            </a>
+            <a href="#" aria-label="YouTube">
+              <img src="assets/icons/social-youtube.svg" alt="YouTube" width="18" height="18" />
+            </a>
+          </div>
+          <div class="footer__payments" role="group" aria-label="Способы оплаты">
+            <span class="footer__pay footer__pay--visa" title="Visa"><span>VISA</span></span>
+            <span class="footer__pay footer__pay--mir" title="Мир">мир</span>
+            <span class="footer__pay footer__pay--mc" title="Mastercard">
+              <img src="assets/icons/pay-mastercard.svg" alt="Mastercard" width="29" height="18" />
+            </span>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Соглашение</a>
+          <a href="#">Договор-оферта</a>
+        </div>
+      </footer>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="js/catalog-main.js"></script>
+  </body>
+</html>
